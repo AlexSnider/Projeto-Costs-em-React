@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "qwe",
+      "budget": "12341231",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "any": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "name": "asdas",
+      "budget": "1234123",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "any": 0,
+      "services": [],
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
