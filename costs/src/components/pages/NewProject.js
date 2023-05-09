@@ -5,7 +5,7 @@ import styles from './NewProject.module.css'
 
 function NewProject() {
 
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
     function createPost(project) {
         project.any = 0
@@ -21,7 +21,7 @@ function NewProject() {
             .then((resp) => resp.json())
             .then((data) => {
                 console.log(data)
-                navigate('/projects', {message: 'Projeto enviado com sucesso!'})
+                navigate('/projects', {state: {message: 'Projeto criado com sucesso!'}})
             })
             .catch(erro => console.log(erro))
     }
