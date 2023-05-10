@@ -12,26 +12,15 @@
       "id": 2
     },
     {
-      "name": "projeto 2",
-      "budget": "1234",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "any": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "projeto 3",
-      "budget": "123445",
+      "name": "projeto alex",
+      "budget": "100000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
       "any": 0,
       "services": [],
-      "id": 4
+      "id": 5
     }
   ],
   "categories": [
