@@ -8,7 +8,7 @@ function NewProject() {
     let navigate = useNavigate();
 
     function createPost(project) {
-        project.any = 0
+        project.cost = 0
         project.services = []
 
         fetch('http://localhost:4500/projects', {
