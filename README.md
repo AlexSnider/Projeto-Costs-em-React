@@ -1,5 +1,3 @@
-# Projeto-Costs-em-React
-
 # Projeto Costs
 
 Projeto Costs desenvolvido para fins de gerenciamento de projetos.
