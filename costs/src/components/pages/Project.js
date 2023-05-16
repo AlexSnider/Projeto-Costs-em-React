@@ -1,9 +1,12 @@
+import { parse, v4 as uuidv4} from 'uuid'
+
 import styles from './Project.module.css'
 import Loading from '../layout/Loading'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Container from '../layout/Container'
 import ProjectForm from '../project/ProjectForm'
+import ServiceForm from '../services/ServiceForm'
 import Message from '../layout/Message'
 
 
@@ -13,6 +16,7 @@ function Project() {
 
   const [project, setProject] = useState([])
   const [showProjectForm, setShowProjectForm] = useState(false)
+  const [showServiceForm, setShowServiceForm] = useState(false)
   const [message, setMessage] = useState()
   const [type, setType] = useState()
 
@@ -38,6 +42,8 @@ function Project() {
     setMessage('')
 
     if (project.budget < project.cost) {
+      setMessage('')
+
       setMessage('O orçamento não pode ser menor que o custo do projeto!')
       setType('error')
       return false
@@ -61,8 +67,46 @@ function Project() {
       .catch(erro => console.log(erro))
   }
 
+  function createService(){
+    setMessage('')
+
+    const lastService = project.services[project.services.length - 1]
+
+    lastService.id = uuidv4()
+
+    const lastServiceCost = lastService.cost
+
+    const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+
+    if(newCost > parseFloat(project.budget)) {
+      setMessage('Orçamento ultrapassado, verifique o valor do serviço!')
+      setType('error')
+      project.services.pop()
+      return false
+    }
+
+    project.cost = newCost
+
+    fetch(`http://localhost:4500/projects/${project.id}`,{
+      method: 'PATCH', 
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(project)
+    }).then((resp) => resp.json())
+    .then((data) => {
+      console.log(data)
+    })
+    
+    .catch(erro => console.log(erro))
+  }
+
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm)
+  }
+
+  function toggleServiceForm() {
+    setShowServiceForm(!showServiceForm)
   }
 
   return (
@@ -98,6 +142,24 @@ function Project() {
                 </div>
               )}
             </div>
+
+            <div className={styles.service_form_container}>
+              <h2>Adicone um serviço:</h2>
+              <button className={styles.btn} onClick={toggleServiceForm}>
+                {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
+              </button>
+              <div className={styles.project_info}>
+                {showServiceForm && <ServiceForm
+                  handleSubmit={createService}
+                  btnText='Adicionar Serviço'
+                  projectData={project}
+                />}
+              </div>
+            </div>
+            <h2>Serviços</h2>
+            <Container customClass='start'>
+              <p>serviços</p>
+            </Container>
           </Container>
         </div>
       ) : (

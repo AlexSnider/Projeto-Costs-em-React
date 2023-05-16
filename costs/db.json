@@ -18,8 +18,21 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 666,
+      "services": [
+        {
+          "name": "ert",
+          "cost": "333",
+          "description": "sdfsdf",
+          "id": "755667e6-e72c-4d38-952b-a138bbe039ea"
+        },
+        {
+          "name": "ert3",
+          "cost": "333",
+          "description": "sdfsdf",
+          "id": "2d4467ef-5393-4192-835d-6099cc16a6a8"
+        }
+      ],
       "id": 4
     }
   ],

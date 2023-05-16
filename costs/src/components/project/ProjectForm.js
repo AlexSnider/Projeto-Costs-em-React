@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Input from '../form/Input'
 import Select from '../form/Select'
-import styles from './Project.module.css'
+import styles from './ProjectForm.module.css'
 import Submit from '../form/Submit'
 
 
