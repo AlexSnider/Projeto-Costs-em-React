@@ -1,6 +1,10 @@
+import styles from './Contact.module.css'
+
 function Contact() {
     return (
-        <h1>Contact</h1>
+        <div className={styles.contact}>
+            <h1>Alex Oliveira</h1>
+        </div>
     )
 }
 

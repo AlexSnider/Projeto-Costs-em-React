@@ -2,13 +2,26 @@
   "projects": [
     {
       "name": "projeto 1",
-      "budget": "-6",
+      "budget": "6000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1000,
+      "services": [
+        {
+          "name": "Contratar Funcionário",
+          "cost": "500",
+          "description": "Ajudar na limpeza",
+          "id": "9460a4f2-f5f7-4bc5-9bed-3bc43ae2594c"
+        },
+        {
+          "name": "Contratar Funcionário",
+          "cost": "500",
+          "description": "Ajudar na limpeza",
+          "id": "9460a4f2-f5f7-4bc5-9bed-3bc43ae2594c"
+        }
+      ],
       "id": 3
     },
     {
@@ -18,21 +31,8 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 666,
-      "services": [
-        {
-          "name": "ert",
-          "cost": "333",
-          "description": "sdfsdf",
-          "id": "755667e6-e72c-4d38-952b-a138bbe039ea"
-        },
-        {
-          "name": "ert3",
-          "cost": "333",
-          "description": "sdfsdf",
-          "id": "2d4467ef-5393-4192-835d-6099cc16a6a8"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 4
     }
   ],
