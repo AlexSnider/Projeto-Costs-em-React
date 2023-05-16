@@ -36,3 +36,4 @@ por membros solicitantes.
 
 # Créditos:
 
+# Tecnologias utilizadas:
