@@ -1,35 +1,51 @@
 {
   "projects": [
     {
-      "name": "projeto 1",
-      "budget": "6000",
+      "name": "Projeto 1",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 3000,
+      "services": [
+        {
+          "name": "Contratar novo Dev",
+          "cost": "3000",
+          "description": "Dev",
+          "id": "253f8a93-55a2-408c-a679-7ae7e3b93521"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Projeto 2",
+      "budget": "7000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 1000,
-      "services": [
-        {
-          "name": "Contratar Funcionário",
-          "cost": "500",
-          "description": "Ajudar na limpeza",
-          "id": "9460a4f2-f5f7-4bc5-9bed-3bc43ae2594c"
-        },
-        {
-          "name": "Contratar Funcionário",
-          "cost": "500",
-          "description": "Ajudar na limpeza",
-          "id": "9460a4f2-f5f7-4bc5-9bed-3bc43ae2594c"
-        }
-      ],
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Projeto 3",
+      "budget": "3500",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
       "id": 3
     },
     {
-      "name": "projeto 2",
-      "budget": "4004",
+      "name": "Projeto 4",
+      "budget": "6900",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": [],
