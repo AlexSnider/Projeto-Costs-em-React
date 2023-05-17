@@ -6,7 +6,7 @@ Projeto Costs foi desenvolvido para fins de gerenciamento de projetos e absorç�
 
 O Costs foi idealizado com a finalidade de levar o conhecimento de React para iniciantes com o framework.
 Basicamente, consiste de uma ferramenta online para gerenciamento de projetos, categorias dos projetos, custos e serviços atrelados 
-ao mesmo, agilizando o processo de criação e acompanhamentodos projetos.
+ao mesmo, agilizando o processo de criação e acompanhamento.
 
 # Funcionalidades:
 
